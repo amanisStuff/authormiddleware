@@ -147,4 +147,3 @@ class Write:
             pass
         with open(file_name, "w") as file:
             file.write("".join(new_content))
-    
