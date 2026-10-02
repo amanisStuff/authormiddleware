@@ -1,17 +1,1 @@
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
+middlewere for an agentic coder to use that reflects my style of using gemini back in 2025
