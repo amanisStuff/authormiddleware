@@ -104,5 +104,47 @@ class read:
             output = output + "\n\t" + "\n\t".join(notdirectories)
             
         return output
-
-print(read.directory_tree("."))
+    @staticmethod 
+    def read_file(path_name:str)-> str:
+        return "".join(open(path_name).readlines())
+        pass
+class Write:
+    def append_to_file(file_name:str, block:str):
+        """
+        Purpose: write a block at the end of a file
+        """
+        with open(file_name, 'a') as f:
+            f.write(block+"\n")
+        # end def
+    @staticmethod
+    def overwrite_file(file_name:str, block:str):
+        """
+        Purpose: delete content and write block
+        """
+        with open(file_name, 'w') as f:
+            f.write(block)
+    @staticmethod
+    def replace_block_on_a_file(file_name:str, starting_of_block:int, ending_of_block:int, block:str):
+        """
+        Purpose: replace the block indicated by the indexes the indexes
+        """
+        new_content:list(str)
+        with open(file_name, "r") as file:
+            lines = file.readlines()
+            new_content= lines[0:starting_of_block-1]+[line+'\n' for line in block.split("\n")]+lines[ending_of_block::]
+            pass
+        with open(file_name, "w") as file:
+            file.write("".join(new_content))
+    @staticmethod
+    def inset_block_at_line(file_name:str, line_number:str,block:str):
+        """
+        Purpose: insert a block at a perticular line
+        """
+        new_content:list(str)
+        with open(file_name, "r") as file:
+            lines = file.readlines()
+            new_content= lines[0:line_number]+[line+'\n' for line in block.split("\n")]+lines[line_number::]
+            pass
+        with open(file_name, "w") as file:
+            file.write("".join(new_content))
+    
