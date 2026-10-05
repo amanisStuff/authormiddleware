@@ -1,0 +1,9 @@
+[agents]
+[agents.planning]
+name="qwen3.5 0.8b"
+address="http://localhost:11434/v1"
+code="qwen3.5:0.8b"
+[agenst.coding]
+name="qwen3.5 0.8b"
+address="http://localhost:11434/v1"
+code="qwen3.5:0.8b"
