@@ -1,9 +1,19 @@
 [agents]
+
 [agents.planning]
-name="qwen3.5 0.8b"
-address="http://localhost:11434/v1"
-code="qwen3.5:0.8b"
-[agenst.coding]
-name="qwen3.5 0.8b"
-address="http://localhost:11434/v1"
-code="qwen3.5:0.8b"
+name = "qwen3.5 0.8b"
+address = "http://localhost:11434/v1"
+code = "qwen3.5:0.8b"
+api_key = "ollama" # Replace with your API key (Ollama accepts any non-empty string)
+
+[agents.coding]
+name = "qwen3.5 0.8b"
+address = "http://localhost:11434/v1"
+code = "qwen3.5:0.8b"
+api_key = "ollama" # Replace with your API key
+
+[agents.decision]
+name = "qwen3.5 0.8b"
+address = "http://localhost:11434/v1"
+code = "qwen3.5:0.8b"
+api_key = "ollama" # Replace with your API key
